@@ -1,0 +1,21 @@
+[project]
+name = "zombicheck"
+version = "1.0.0"
+description = "ZombieCheck: verdicts for 500+ spreadsheet rows from live pages (alive / slowing_down / zombie)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["tinyfish>=0.11"]
+
+[project.scripts]
+zombiecheck = "zombicheck.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["zombicheck"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
